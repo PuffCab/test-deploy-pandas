@@ -1,7 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Button, OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { OverlayInjectedProps } from "react-bootstrap/esm/Overlay";
 
 function MyNavbar() {
   // const [user, setUser] = useState<User | null>(null);
@@ -13,7 +14,7 @@ function MyNavbar() {
   };
 
   // * function from bootstrap for tooltip
-  const renderTooltip = (props) => (
+  const renderTooltip = (props: OverlayInjectedProps) => (
     <Tooltip id="button-tooltip" {...props}>
       Login First!
     </Tooltip>

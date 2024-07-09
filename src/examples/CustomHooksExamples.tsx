@@ -43,11 +43,11 @@ function CustomHooksExamples() {
   //? using custom hook to set different timers
 
   const { countDownMessage } = useCountDown(2000);
-  const { countDownMessage: countDownMessage2 } = useCountDown("5000asdasd");
+  const { countDownMessage: countDownMessage2 } = useCountDown(500);
   return (
     <div>
       {user ? (
-        <h1>Welcome {user.name} to my website</h1>
+        <h1>Welcome {user.email} to my website</h1>
       ) : (
         <h1>No user logged in</h1>
       )}

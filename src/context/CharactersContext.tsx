@@ -49,7 +49,7 @@ export const CharactersContextProvider = ({
   const [info, setInfo] = useState<Info | null>(null);
 
   const getCharacters = async (apiUrl: string) => {
-    const apiKey = import.meta.env.VITE_API_KEY;
+    // const apiKey = import.meta.env.VITE_API_KEY;
 
     // console.log("apiKey :>> ", apiKey);
     try {

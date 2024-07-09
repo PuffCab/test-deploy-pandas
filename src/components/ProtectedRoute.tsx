@@ -1,7 +1,5 @@
-import React, { ReactNode, useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
-import { Navigate } from "react-router-dom";
-import checkUserStatus from "../utils/checkUserStatus";
+import React, { ReactNode } from "react";
+
 import useCheckUserStatus from "../hooks/useCheckUserStatus";
 
 type ProtectedRouteProps = {

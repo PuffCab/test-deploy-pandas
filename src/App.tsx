@@ -4,18 +4,18 @@ import {
   Route,
   RouterProvider,
   Outlet,
-  Link,
+  // Link,
 } from "react-router-dom";
 import "./App.css";
 import CharactersList from "./pages/CharactersList";
 import About from "./pages/About";
 import MyNavbar from "./components/MyNavbar";
 import NoMatchPage from "./pages/NoMatchPage";
-import CharacterDetails from "./pages/CharacterDetails";
+// import CharacterDetails from "./pages/CharacterDetails";
 import Home from "./pages/Home";
 import { CharactersContextProvider } from "./context/CharactersContext";
 import Contact from "./pages/Contact";
-import { AuthContext, AuthContextProvider } from "./context/AuthContext";
+import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
