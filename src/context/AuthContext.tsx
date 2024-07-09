@@ -62,7 +62,7 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
-        const user = userCredential.user;
+        // const user = userCredential.user;
         // ...
         console.log("user :>> ", userCredential.user);
         if (userCredential.user.email) {
@@ -72,8 +72,8 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
         }
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
         console.log("error :>> ", error);
       });
   };
@@ -84,7 +84,7 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
       if (user) {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
-        const uid = user.uid;
+        // const uid = user.uid;
         console.log("user IS LOGGED IN");
         if (user.email) {
           setUser({ email: user.email, uid: user.uid });
@@ -110,7 +110,8 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
       .catch((error) => {
         // An error happened.
         console.log(
-          "something went wrong during Logout ...you are still loggedin"
+          "something went wrong during Logout ...you are still loggedin",
+          error
         );
       });
   };

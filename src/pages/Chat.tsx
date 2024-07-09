@@ -6,13 +6,7 @@ import {
   onSnapshot,
   query,
 } from "firebase/firestore";
-import React, {
-  ChangeEvent,
-  FormEvent,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { ChangeEvent, FormEvent, useContext, useEffect, useState } from "react";
 import { db } from "../config/firebaseConfig";
 // import { Date } from "firebase/vertexai-preview";
 import { Button, Card, FloatingLabel, Form, Stack } from "react-bootstrap";
@@ -32,26 +26,26 @@ function Chat() {
 
   const [messageText, setMessageText] = useState("");
 
-  const getMessages = async () => {
-    const querySnapshot = await getDocs(collection(db, "chat"));
-    const messagesArray: Message[] = [];
-    querySnapshot.forEach((doc) => {
-      //   console.log("doc :>> ", doc.id);
+  // const getMessages = async () => {
+  //   const querySnapshot = await getDocs(collection(db, "chat"));
+  //   const messagesArray: Message[] = [];
+  //   querySnapshot.forEach((doc) => {
+  //     //   console.log("doc :>> ", doc.id);
 
-      //   console.log(`${doc.id} => ${doc.data().date.seconds}`);
-      //? If you want to INCLUDE the ID of the message document in your message state
-      const messageWithId = {
-        author: doc.data().author,
-        text: doc.data().text,
-        date: doc.data().date.seconds,
-        id: doc.id,
-      };
-      messagesArray.push(messageWithId as Message);
-      //? otherwise, if you don't want to include the id, you can just set the data with doc.data() as below
-      //   messagesArray.push(doc.data() as Message);
-    });
-    setMessages(messagesArray);
-  };
+  //     //   console.log(`${doc.id} => ${doc.data().date.seconds}`);
+  //     //? If you want to INCLUDE the ID of the message document in your message state
+  //     const messageWithId = {
+  //       author: doc.data().author,
+  //       text: doc.data().text,
+  //       date: doc.data().date.seconds,
+  //       id: doc.id,
+  //     };
+  //     messagesArray.push(messageWithId as Message);
+  //     //? otherwise, if you don't want to include the id, you can just set the data with doc.data() as below
+  //     //   messagesArray.push(doc.data() as Message);
+  //   });
+  //   setMessages(messagesArray);
+  // };
 
   const getMessagesRealTime = () => {
     const q = query(collection(db, "chat"));
@@ -110,7 +104,7 @@ function Chat() {
       <div>
         <Stack gap={3} className="align-items-center">
           {messages &&
-            messages.map((message, index) => {
+            messages.map((message) => {
               //   console.log("message>>>", message);
               return (
                 <Card

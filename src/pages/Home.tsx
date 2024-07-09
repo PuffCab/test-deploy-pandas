@@ -1,25 +1,25 @@
 import React, { useContext } from "react";
 import { CharactersContext } from "../context/CharactersContext";
 import { AuthContext } from "../context/AuthContext";
-import useFetchData from "../hooks/useFetchData";
-import useToggle from "../hooks/useToggle";
-import useCountDown from "../hooks/useCountDown";
-import { app, auth } from "../config/firebaseConfig";
+// import useFetchData from "../hooks/useFetchData";
+// import useToggle from "../hooks/useToggle";
+// import useCountDown from "../hooks/useCountDown";
+// import { app, auth } from "../config/firebaseConfig";
 
 //Disclaimer: below types are only in this component for the exercise. In your project put them where they belong
-type BlogType = {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-};
+// type BlogType = {
+//   userId: number;
+//   id: number;
+//   title: string;
+//   body: string;
+// };
 
-type UserType = {
-  name: string;
-  username: string;
-  email: string;
-  phone: string;
-};
+// type UserType = {
+//   name: string;
+//   username: string;
+//   email: string;
+//   phone: string;
+// };
 
 function Home() {
   // console.log("app :>> ", app);

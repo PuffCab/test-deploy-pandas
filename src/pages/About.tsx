@@ -1,4 +1,3 @@
-import React from "react";
 import useCheckUserStatus from "../hooks/useCheckUserStatus";
 
 function About() {

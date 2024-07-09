@@ -6,7 +6,7 @@ import {
   useState,
 } from "react";
 import Grid from "../components/Grid";
-import { ApiResponse, Characters, Info } from "../@types/CustomTypes";
+// import { ApiResponse, Characters, Info } from "../@types/CustomTypes";
 import Search from "../components/Search";
 import { CharactersContext } from "../context/CharactersContext";
 

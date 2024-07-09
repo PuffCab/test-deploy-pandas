@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {
-  ErrorResponse,
-  Navigate,
+  // ErrorResponse,
+  // Navigate,
   useNavigate,
   useRouteError,
 } from "react-router-dom";
@@ -18,6 +18,7 @@ type ErrorPage = {
 
 function NoMatchPage() {
   const [isRedirect, setIsRedirect] = useState(false);
+  console.log("isRedirect :>> ", isRedirect);
 
   const redirectUser = () => {
     setTimeout(() => {
