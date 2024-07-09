@@ -8,6 +8,7 @@ type CharacterCardProps = {
   name: string;
   species: string;
   gender: string;
+  id: number;
 };
 
 function CharacterCard({

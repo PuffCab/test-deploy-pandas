@@ -2,7 +2,6 @@ import {
   Timestamp,
   addDoc,
   collection,
-  getDocs,
   onSnapshot,
   query,
 } from "firebase/firestore";

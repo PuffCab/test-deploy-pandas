@@ -4,7 +4,6 @@ import {
   Route,
   RouterProvider,
   Outlet,
-  Link,
 } from "react-router-dom";
 import "./App.css";
 import CharactersList from "./pages/CharactersList";
@@ -15,7 +14,7 @@ import NoMatchPage from "./pages/NoMatchPage";
 import Home from "./pages/Home";
 import { CharactersContextProvider } from "./context/CharactersContext";
 import Contact from "./pages/Contact";
-import { AuthContext, AuthContextProvider } from "./context/AuthContext";
+import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
