@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { CharactersContext } from "../context/CharactersContext";
 import { AuthContext } from "../context/AuthContext";
 // import useFetchData from "../hooks/useFetchData";
